@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- =====================================================
+       Document Metadata
+       ===================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Payoo - Login</title>
+
+
+  <!-- =====================================================
+       DaisyUI
+       ===================================================== -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       Tailwind CSS
+       ===================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- =====================================================
+       Custom CSS
+       ===================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+</head>
+
+
+<body class="bg-slate-100">
+
+  <!-- =====================================================
+       Login Application Container
+       ===================================================== -->
+
+  <main
+    class="phone-shell bg-white w-full max-w-md min-h-[720px] rounded-[2rem] shadow-xl overflow-hidden mx-auto sm:my-6"
+  >
+
+
+    <!-- ===================================================
+         Login Header
+         =================================================== -->
+
+    <div
+      class="login-top px-6 pt-14 pb-10 text-white"
+    >
+
+
+      <!-- =================================================
+           Brand
+           ================================================= -->
+
+      <div class="flex items-center gap-3">
+
+        <!-- Payoo Logo -->
+        <div class="brand-mark brand-mark-light">
+
+          <span></span>
+          <span></span>
+
+        </div>
+
+
+        <!-- Brand Information -->
+        <div>
+
+          <h1 class="text-2xl font-extrabold">
+            Pay<span class="text-cyan-300">oo</span>
+          </h1>
+
+          <p class="text-sm text-white/70">
+            Simple digital wallet
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           Welcome Message
+           ================================================= -->
+
+      <div class="mt-10">
+
+        <h2 class="text-3xl font-extrabold">
+          Welcome Back!
+        </h2>
+
+        <p class="mt-2 text-white/75">
+          Login to continue using your wallet.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         Login Form
+         =================================================== -->
+
+    <form
+      id="loginForm"
+      class="p-6 space-y-5"
+    >
+
+
+      <!-- =================================================
+           Mobile Number
+           ================================================= -->
+
+    <div>
+
+  <label
+    for="loginPhone"
+    class="font-semibold"
+  >
+    Mobile Number
+  </label>
+
+  <input
+    id="loginPhone"
+    class="input input-bordered w-full mt-2 rounded-full bg-white text-slate-800 border-slate-300"
+    type="tel"
+    maxlength="11"
+    inputmode="numeric"
+    placeholder="01XXXXXXXXX"
+    required
+  >
+
+</div>
+
+
+<!-- =================================================
+     PIN
+     ================================================= -->
+
+<div>
+
+  <label
+    for="loginPin"
+    class="font-semibold"
+  >
+    4-Digit PIN
+  </label>
+
+  <input
+    id="loginPin"
+    class="input input-bordered w-full mt-2 rounded-full bg-white text-slate-800 border-slate-300"
+    type="password"
+    maxlength="4"
+    inputmode="numeric"
+    placeholder="Enter PIN"
+    required
+  >
+
+</div>
+
+
+      <!-- =================================================
+           Login Button
+           ================================================= -->
+
+      <button
+        type="submit"
+        class="btn btn-primary w-full rounded-full border-0 bg-indigo-700 hover:bg-indigo-800 text-white text-lg"
+      >
+        Login
+      </button>
+
+
+      <!-- =================================================
+           Login Message
+           ================================================= -->
+
+      <div
+        id="loginMessage"
+        class="text-center text-sm"
+      ></div>
+
+    </form>
+
+
+    <!-- ===================================================
+         Demo Account Information
+         =================================================== -->
+
+    <div
+      class="px-6 pb-8 text-center text-sm text-slate-500"
+    >
+
+      Demo:
+
+      <b>01700000000</b>
+
+      /
+
+      <b>1234</b>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       Shared Application JavaScript
+       ===================================================== -->
+
+  <script src="js/app.js"></script>
+
+
+  <!-- =====================================================
+       Authentication JavaScript
+       ===================================================== -->
+
+  <script src="js/auth.js"></script>
+
+</body>
+
+</html>

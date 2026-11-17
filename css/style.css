@@ -1,0 +1,468 @@
+/* =========================================================
+   Global Styles
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #222;
+}
+
+
+/* =========================================================
+   Main Application Container
+   ========================================================= */
+
+.phone-shell {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   Brand Logo
+   ========================================================= */
+
+.brand-mark {
+  position: relative;
+
+  display: block;
+
+  width: 48px;
+  height: 48px;
+}
+
+.brand-mark span:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 0;
+
+  border-top: 24px solid #3926c9;
+  border-right: 24px solid transparent;
+}
+
+.brand-mark span:last-child {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 0;
+
+  border-bottom: 24px solid #3926c9;
+  border-left: 24px solid transparent;
+}
+
+
+/* White Logo Variant */
+
+.brand-mark-light span:first-child {
+  border-top-color: #fff;
+}
+
+.brand-mark-light span:last-child {
+  border-bottom-color: #fff;
+}
+
+
+/* =========================================================
+   Login Page
+   ========================================================= */
+
+.login-top {
+  background: linear-gradient(
+    145deg,
+    #3121ad,
+    #4a35dc
+  );
+}
+
+
+/* =========================================================
+   Service Cards
+   ========================================================= */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 88px;
+
+  gap: 7px;
+
+  padding: 10px;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 14px;
+
+  background-color: #fff;
+
+  color: #4b4b4b;
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.service-card:hover {
+  border-color: #3985ff;
+
+  background-color: #f2f7ff;
+
+  color: #0878ff;
+
+  transform: translateY(-1px);
+}
+
+
+/* Service Icon */
+
+.service-icon-img {
+  display: block;
+
+  width: 28px;
+  height: 28px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   Mobile Bottom Navigation
+   ========================================================= */
+
+.mobile-nav {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+
+  display: flex;
+  justify-content: space-around;
+
+  padding: 10px 4px 12px;
+
+  border-top: 1px solid #ddd;
+
+  background-color: rgba(255, 255, 255, 0.97);
+}
+
+.mobile-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 55px;
+
+  gap: 3px;
+
+  color: #777;
+
+  font-size: 11px;
+
+  text-decoration: none;
+}
+
+.mobile-nav a.active {
+  color: #3926c9;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   Page Header
+   ========================================================= */
+
+.page-header {
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  align-items: center;
+
+  height: 82px;
+
+  padding: 0 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background-color: #fff;
+}
+
+.page-header h1 {
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   Back Button
+   ========================================================= */
+
+.back-btn {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  color: #333;
+
+  font-size: 20px;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   Balance Display
+   ========================================================= */
+
+.balance-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  border-radius: 18px;
+
+  background-color: #fff;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.balance-strip span {
+  color: #777;
+
+  font-size: 13px;
+}
+
+.balance-strip strong {
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   Form Card
+   ========================================================= */
+
+.form-card {
+  padding: 24px;
+
+  border-radius: 24px;
+
+  background-color: #fff;
+
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04);
+}
+
+
+/* Form Labels */
+
+.form-card label {
+  display: block;
+
+  margin: 14px 0 8px;
+
+  color: #555;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-card label:first-child {
+  margin-top: 0;
+}
+
+
+/* Form Inputs */
+
+.form-card .input,
+.form-card .select {
+  height: 52px;
+
+  border: 0;
+
+  background-color: #f4f4f6;
+
+  color: #444;
+}
+
+
+/* Input Focus State */
+
+.form-card .input:focus,
+.form-card .select:focus {
+  outline: 2px solid #806cff;
+}
+
+
+/* =========================================================
+   Bonus Section
+   ========================================================= */
+
+.bonus-hero {
+  padding: 30px 24px;
+
+  border-radius: 24px;
+
+  background-color: #fff;
+
+  text-align: center;
+
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================================
+   Transaction Filters
+   ========================================================= */
+
+.filter-btn {
+  padding: 8px 14px;
+
+  border: 1px solid #ddd;
+  border-radius: 999px;
+
+  background-color: #fff;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.filter-btn.active {
+  border-color: #3926c9;
+
+  background-color: #3926c9;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   Transaction Item
+   ========================================================= */
+
+.txn {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 14px;
+
+  border: 1px solid #e2e2e2;
+  border-radius: 14px;
+
+  background-color: #fff;
+}
+
+
+/* Transaction Icon */
+
+.txn-icon {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  background-color: #f1f1f1;
+
+  font-size: 20px;
+}
+
+
+/* Transaction Information */
+
+.txn-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.txn-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.txn-date {
+  margin-top: 2px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+
+/* Transaction Amount */
+
+.txn-amount {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* Money In */
+
+.credit {
+  color: #119447;
+}
+
+
+/* Money Out */
+
+.debit {
+  color: #d54c4c;
+}
+
+
+/* =========================================================
+   Responsive Layout
+   ========================================================= */
+
+@media (min-width: 640px) {
+  .phone-shell {
+    min-height: calc(100vh - 48px);
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    border-radius: 28px;
+  }
+}

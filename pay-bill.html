@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- =====================================================
+       Document Metadata
+       ===================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Payoo - Pay Bill</title>
+
+
+  <!-- =====================================================
+       DaisyUI
+       ===================================================== -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       Tailwind CSS
+       ===================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- =====================================================
+       Custom CSS
+       ===================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+</head>
+
+
+<body class="bg-slate-100">
+
+  <!-- =====================================================
+       Main Application Container
+       ===================================================== -->
+
+  <main
+    class="phone-shell min-h-screen mx-auto max-w-md bg-slate-100 shadow-xl overflow-hidden"
+  >
+
+
+    <!-- ===================================================
+         Page Header
+         =================================================== -->
+
+    <header class="page-header">
+
+      <!-- Back Button -->
+      <a
+        href="home.html"
+        class="back-btn"
+        aria-label="Go back to home"
+      >
+        ←
+      </a>
+
+
+      <!-- Page Title -->
+      <h1>Pay Bill</h1>
+
+
+      <!-- Header Spacer -->
+      <span></span>
+
+    </header>
+
+
+    <!-- ===================================================
+         Pay Bill Section
+         =================================================== -->
+
+    <section class="px-6 py-6">
+
+
+      <!-- =================================================
+           Available Balance
+           ================================================= -->
+
+      <div class="balance-strip">
+
+        <span>
+          Available Balance
+        </span>
+
+        <strong id="balance">
+          ৳45,000
+        </strong>
+
+      </div>
+
+
+      <!-- =================================================
+           Bill Payment Form
+           ================================================= -->
+
+      <form
+        id="billForm"
+        class="form-card mt-5"
+      >
+
+
+        <!-- =================================================
+             Bill Type
+             ================================================= -->
+
+        <label for="billType">
+          Select To Pay
+        </label>
+
+        <select
+          id="billType"
+          class="select select-bordered w-full rounded-full"
+        >
+
+          <option>
+            Electricity Bill
+          </option>
+
+          <option>
+            Gas Bill
+          </option>
+
+          <option>
+            Water Bill
+          </option>
+
+          <option>
+            Internet Bill
+          </option>
+
+        </select>
+
+
+        <!-- =================================================
+             Biller Account Number
+             ================================================= -->
+
+        <label for="account">
+          Biller Account Number
+        </label>
+
+        <input
+          id="account"
+          class="input input-bordered w-full rounded-full"
+          type="text"
+          placeholder="Enter account number"
+          required
+        >
+
+
+        <!-- =================================================
+             Payment Amount
+             ================================================= -->
+
+        <label for="amount">
+          Amount to Pay
+        </label>
+
+        <input
+          id="amount"
+          class="input input-bordered w-full rounded-full"
+          type="number"
+          min="10"
+          placeholder="Add amount to pay"
+          required
+        >
+
+
+        <!-- =================================================
+             PIN
+             ================================================= -->
+
+        <label for="pin">
+          PIN Number
+        </label>
+
+        <input
+          id="pin"
+          class="input input-bordered w-full rounded-full"
+          type="password"
+          maxlength="4"
+          inputmode="numeric"
+          placeholder="Enter 4 digit PIN"
+          required
+        >
+
+
+        <!-- =================================================
+             Submit Button
+             ================================================= -->
+
+        <button
+          type="submit"
+          class="btn btn-primary w-full rounded-full bg-indigo-700 border-0 text-white mt-2"
+        >
+          Pay Now
+        </button>
+
+
+        <!-- =================================================
+             Form Message
+             ================================================= -->
+
+        <div
+          id="formMessage"
+          class="text-center text-sm mt-3"
+        ></div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       Shared Application JavaScript
+       ===================================================== -->
+
+  <script src="js/app.js"></script>
+
+
+  <!-- =====================================================
+       Wallet Service JavaScript
+       ===================================================== -->
+
+  <script src="js/wallet.js"></script>
+
+</body>
+
+</html>

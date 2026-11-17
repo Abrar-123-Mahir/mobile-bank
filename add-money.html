@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- =====================================================
+       Document Metadata
+       ===================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Payoo - Add Money</title>
+
+
+  <!-- =====================================================
+       DaisyUI
+       ===================================================== -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       Tailwind CSS
+       ===================================================== -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- =====================================================
+       Custom CSS
+       ===================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+</head>
+
+
+<body class="bg-slate-100">
+
+  <!-- =====================================================
+       Main Application Container
+       ===================================================== -->
+
+  <main
+    class="phone-shell min-h-screen mx-auto max-w-md bg-slate-100 shadow-xl overflow-hidden"
+  >
+
+
+    <!-- ===================================================
+         Page Header
+         =================================================== -->
+
+    <header class="page-header">
+
+      <!-- Back Button -->
+      <a
+        href="home.html"
+        class="back-btn"
+        aria-label="Go back to home"
+      >
+        ←
+      </a>
+
+
+      <!-- Page Title -->
+      <h1>Add Money</h1>
+
+
+      <!-- Header Spacer -->
+      <span></span>
+
+    </header>
+
+
+    <!-- ===================================================
+         Add Money Section
+         =================================================== -->
+
+    <section class="px-6 py-6">
+
+
+      <!-- =================================================
+           Available Balance
+           ================================================= -->
+
+      <div class="balance-strip">
+
+        <span>
+          Available Balance
+        </span>
+
+        <strong id="balance">
+          ৳45,000
+        </strong>
+
+      </div>
+
+
+      <!-- =================================================
+           Add Money Form
+           ================================================= -->
+
+      <form
+        id="addMoneyForm"
+        class="form-card mt-5"
+      >
+
+
+        <!-- =================================================
+             Money Source
+             ================================================= -->
+
+        <label for="source">
+          Select Source
+        </label>
+
+        <select
+          id="source"
+          class="select select-bordered w-full rounded-full"
+        >
+
+          <option>
+            Bank Account
+          </option>
+
+          <option>
+            Debit/Credit Card
+          </option>
+
+          <option>
+            Other Wallet
+          </option>
+
+        </select>
+
+
+        <!-- =================================================
+             Amount
+             ================================================= -->
+
+        <label for="amount">
+          Amount
+        </label>
+
+        <input
+          id="amount"
+          class="input input-bordered w-full rounded-full"
+          type="number"
+          min="10"
+          placeholder="Enter amount"
+          required
+        >
+
+
+        <!-- =================================================
+             PIN
+             ================================================= -->
+
+        <label for="pin">
+          PIN Number
+        </label>
+
+        <input
+          id="pin"
+          class="input input-bordered w-full rounded-full"
+          type="password"
+          maxlength="4"
+          inputmode="numeric"
+          placeholder="Enter 4 digit PIN"
+          required
+        >
+
+
+        <!-- =================================================
+             Submit Button
+             ================================================= -->
+
+        <button
+          type="submit"
+          class="btn btn-primary w-full rounded-full bg-indigo-700 border-0 text-white mt-2"
+        >
+          Add Money
+        </button>
+
+
+        <!-- =================================================
+             Form Message
+             ================================================= -->
+
+        <div
+          id="formMessage"
+          class="text-center text-sm mt-3"
+        ></div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       Shared Application JavaScript
+       ===================================================== -->
+
+  <script src="js/app.js"></script>
+
+
+  <!-- =====================================================
+       Wallet Service JavaScript
+       ===================================================== -->
+
+  <script src="js/wallet.js"></script>
+
+</body>
+
+</html>
